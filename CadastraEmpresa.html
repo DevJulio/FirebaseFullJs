@@ -1,0 +1,261 @@
+<html>
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+
+    <title>Banco virtual de talentos</title>
+
+
+
+
+
+    <!-- firebase-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-storage.js"></script>
+
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <!--   class="ml-3" DETERMINA O ESPAÇAMENTO À ESQUERDA         -->
+        <h5 class="ml-2 text-black h5"> Banco Virtual de Talentos </h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  mr-auto">
+
+                <li class="nav-item active">
+                    <a class="ml-2 nav-link" href="CadastraEmpresa.html">Cadastro de Empresa<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="ml-2 nav-link" href="CadastroAluno.html">Cadastro de Aluno<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./Login.html">Menu</a>
+            </li>
+        </div>
+    </nav>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundoEmpresa.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+    <div class="container" style="background-color: white">
+        </br>
+        </br>
+        </br>
+        <div class="text-center">
+            <H3>Informe os dados da Empresa </H3>
+        </div>
+        </br>
+
+
+
+        <div class="form-row">
+
+
+
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">CNPJ</label>
+                <input type="text" class="form-control" id="CNPJ" placeholder="CNPJ">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="NomeF">Nome Fantasia</label>
+                <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome Fantasia">
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="Razaos">Razão Social</label>
+                <input type="text" class="form-control" id="razaoSocial" placeholder="Razão Social">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Celular" style="background-color: white">Telefone</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone1"
+                    placeholder="Celular">
+            </div>
+        </div>
+        <div class="form-row">
+            
+
+            <div class="form-group col-md-6">
+                <label for="Celular 2" style="background-color: white">Telefone 2</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone2"
+                    placeholder="Celular 2">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Representante Legal">Representante Legal</label>
+                <input type="text" class="form-control" id="RepresentanteLegal" placeholder="Representante Legal">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Imagem do perfil">Imagem do perfil</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="imagemPerfil">
+                    <label class="custom-file-label" for="customFile">Imagem do perfil</label>
+                    </br></br>
+                </div>
+                </br>
+                <div class="progress" id="progressbar">
+                    </br></br>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Area">Área da Empresa:</label>
+                <select id="Area" class="form-control">
+                    <option selected>Indústria</option>
+                    <option selected>Comércio</option>
+                    <option selected>Serviço</option>
+                    <option selected>Agropecuária</option>
+                    <option selected>Agroindústria</option>
+                </select>
+            </div>
+        </div>
+        <div class="text-center">
+            <H3>Informe os dados do Endereço </H3>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="Endereco">Endereço</label>
+                <input type="text" class="form-control" id="Endereco" placeholder="Endereço">
+            </div>
+
+
+            <div class="form-group col-md-6">
+                <label for="Numero">Numero</label>
+                <input type="text" class="form-control" id="Numero" placeholder="Numero">
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Bairro">Bairro</label>
+                <input type="text" class="form-control" id="Bairro" placeholder="Bairro">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Cidade">Cidade</label>
+                <input type="text" class="form-control" id="Cidade" placeholder="Cidade">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Estado">Estado</label>
+                <input type="text" class="form-control" id="Estado" placeholder="Estado">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="CEP" style="background-color: white">CEP</label>
+                <input type="text" class="form-control" id="CEP" placeholder="CEP">
+            </div>
+        </div>
+
+        <div class="text-center">
+            <H3>Informe os dados do orientador/surpervisor na empresa</H3>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Nome">Nome</label>
+                <input type="text" class="form-control" id="Nome" placeholder="Nome">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Cargo">Cargo</label>
+                <input type="text" class="form-control" id="Cargo" placeholder="Cargo">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="CPF" style="background-color: white">CPF</label>
+                <input type="text" class="form-control" minlength="14" maxlength="14"  onkeypress="$(this).mask('000.000.000-00');" id="CPF" placeholder="CPF">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="RG" style="background-color: white">RG</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('00.000.000-00')" id="RG" placeholder="RG">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="Orgão Expedidor" style="background-color: white">Orgão Expedidor</label>
+                <input type="text" class="form-control" id="OE" placeholder="Orgão Expedidor">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Celular" style="background-color: white">Celular</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone1"
+                    placeholder="Celular">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Celular 2" style="background-color: white">Celular 2</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone2"
+                    placeholder="Celular 2">
+            </div>
+
+        </div>
+
+
+
+        <button type="button" class="btn btn-success btn-lg btn-block" onclick="set()">Cadastrar-se</button>
+        </br>
+        </br>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+    <script src="js/CadastraEmpresa.js"></script>
+</body>
+
+
+</html>

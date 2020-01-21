@@ -1,0 +1,328 @@
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+    <script src="./js/CadastroAluno.js"></script>
+
+    <title>Banco virtual de talentos</title>
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+         integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+ 
+ 
+ 
+     <!-- aaaaaaaaaaaaaaaaaaaa -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+
+
+
+    <!-- firebase-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+
+
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <h5 class="ml-2 text-black h5"> Banco Virtual de Talentos </h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  mr-auto">
+
+                <li class="ml-2 nav-item  d-flex justify-content-xl-end">
+                    <a class="nav-link " href="./AlunoIndex.html">Menu</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link active" href="./AlunoCurriculo.html">Currículo<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./AlunoPerfil.html">Perfil<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./AlunoSolicitado.html">Solicitações de Empresas<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./Login.html">Menu</a>
+            </li>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundo-main.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    <div class="container" style="background-color: white">
+        </br>
+        </br>
+        </br>
+        </br>
+        <h3 class="text-center">Características Profissionais</h3>
+        </br>
+
+
+
+        <form class="form-signin">
+
+
+
+            <div>
+                <H3>Idiomas:</H3>
+                <H5 style="background-color: white">informe os idiomas que você possui conhecimento:</H3>
+            </div>
+            <div class="form-row">
+                <div class="form-group  col-sm-6 ">
+                    <label for="idioma1" style="background-color: white">Idioma 1: </label>
+                    <select id="idioma1" class="form-control">
+                        <option selected>Escolha...</option>
+                        <option selected>Inglês</option>
+                        <option selected>Francês</option>
+                        <option selected>Espanhol</option>
+                        <option selected>Libras</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="idioma2" style="background-color: white">Idioma 2: </label>
+                    <select id="idioma2" class="form-control">
+                        <option selected>Escolha...</option>
+                        <option selected>Não possuo</option>
+                        <option selected>Espanhol</option>
+                        <option selected>Libras</option>
+                        <option selected>Inglês</option>
+                        <option selected>Francês</option>
+                    </select>
+                </div>
+
+
+
+                </br>
+
+            </div>
+            <div>
+                <H3>Dados de contato:</H3>
+                <H5 style="background-color: white">informe um contato para buscar referências a respeito do seu
+                    trabalho:</H3>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group  col-sm-6 ">
+                    <label for="Nome" style="background-color: white">Nome: </label>
+                    <input type="text" class="form-control" id="Nome" placeholder="Nome">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="Telefone" style="background-color: white">Contato: </label>
+                    <input type="text" class="form-control" id="Telefone" placeholder="Telefone">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="table-responsive col-md-10">
+                    <h3 style="background-color: white">Habilidades:</h3>
+                    <p style="background-color: white">Informe quais são suas habilidades Profissionais, Ex: "Trabalhar
+                        bem
+                        em equipe".</p>
+                    <table class="table table-borderless " id="dynamic_field">
+                        <tr>
+                            <td><input type="text" name="HabilidadesVetor[]" placeholder="Habilidade: "
+                                    class="form-control name_list" /></td>
+                            <td><button type="button" name="add" id="add" class="btn btn-success">Adicionar
+                                    Mais</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+                        var i = 100;
+                        $('#add').click(function () {
+                            i++;
+                            $('#dynamic_field').append('<tr id="row' + i + '"><td><input type="text" name="HabilidadesVetor[]" placeholder="Adicionar mais" class="form-control name_list" /></td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">Remover habilidade</button></td></tr>');
+                        });
+
+                        $(document).on('click', '.btn_remove', function () {
+                            var button_id = $(this).attr("id");
+                            $('#row' + button_id + '').remove();
+                        });
+
+
+                    });
+                </script>
+                </br>
+
+
+
+                <div class="table-responsive col-md-10">
+                    <h3 style="background-color: white">Experiência :</h3>
+                    <p style="background-color: white">Informe os lugares que você já trabalhou, Ex: Enfermeira(o) Na
+                        emrpesa "Hospital ABC"</p>
+                    <table class="table table-borderless " id="dynamic_fieldd">
+                        <tr>
+                            <td><input type="text" name="ExperienciaVetor[]" placeholder="Experiência: "
+                                    class="form-control name_list" /></td>
+                            <td><button type="button" name="add" id="addd" class="btn btn-success">Adicionar
+                                    Mais</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+                        var j = 200;
+                        $('#addd').click(function () {
+                            j++;
+                            $('#dynamic_fieldd').append('<tr id="row' + j + '"><td><input type="text" name="ExperienciaVetor[]" placeholder="Adicionar mais" class="form-control name_list" /></td><td><button type="button" name="remove" id="' + j + '" class="btn btn-danger btn_remove">Remover habilidade</button></td></tr>');
+                        });
+
+                        $(document).on('click', '.btn_remove', function () {
+                            var button_id = $(this).attr("id");
+                            $('#row' + button_id + '').remove();
+                        });
+
+
+                    });
+
+                </script>
+                </br>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="table-responsive col-md-10">
+                    <h3 style="background-color: white">Palavras Chave:</h3>
+                    <p style="background-color: white">Informe palvras chave para que você seja encontrado pelas
+                        empresas</p>
+                    <table class="table table-borderless " id="dynamic_fielddd">
+                        <tr>
+                            <td><input type="text" name="PalavrasChaveVetor[]" placeholder="Palavras Chave: "
+                                    class="form-control name_list" /></td>
+                            <td><button type="button" name="add" id="adddd" class="btn btn-success">Adicionar
+                                    Mais</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+                        var k = 300;
+                        $('#adddd').click(function () {
+                            k++;
+                            $('#dynamic_fielddd').append('<tr id="row' + k + '"><td><input type="text" name="PalavrasChaveVetor[]" placeholder="Adicionar mais" class="form-control name_list" /></td><td><button type="button" name="remove" id="' + k + '" class="btn btn-danger btn_remove">Remover Palavra Chave</button></td></tr>');
+                        });
+
+                        $(document).on('click', '.btn_remove', function () {
+                            var button_id = $(this).attr("id");
+                            $('#row' + button_id + '').remove();
+                        });
+
+
+                    });
+
+                </script>
+                </br>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="setProf()">Cadastrar</button>
+            </br>
+            </br>
+            </br> </br>
+
+        </form>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDdshKPmkJgB2rnrlXE5ryEEB-VvG2F5_8",
+            authDomain: "banco-virtual-de-talentos.firebaseapp.com",
+            databaseURL: "https://banco-virtual-de-talentos.firebaseio.com",
+            projectId: "banco-virtual-de-talentos",
+            storageBucket: "banco-virtual-de-talentos.appspot.com",
+            messagingSenderId: "463860022406"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="./js/AlunoCadastraProfissional.js"></script>
+</body>
+
+</html>

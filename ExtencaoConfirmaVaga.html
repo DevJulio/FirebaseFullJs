@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+
+    <title>Banco virtual de talentos</title>
+
+
+
+
+    <meta charset="utf-8">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" alt="">
+
+        <h5 class="ml-2 text-black h5"> Banco Virtual de Talentos</h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="ml-2 nav-item  d-flex justify-content-xl-end">
+                    <a class="nav-link " href="./ExtencaoIndexNovo.html">Menu</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./AprovaAlunosExtencao.html">Aprovar cadastros<span
+                            class="sr-only">(current)</span></a>
+                </li>
+        
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./ExtensaoEstatisticas.html">Estatísticas<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./loginExtensao.html">Logout</a>
+            </li>
+        </div>
+
+    </nav>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+    <!-- aaaaaaaaaaaaaaaaaaaa -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundo-main.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+<div class="container">    </br> </br>    </br> 
+    <div class="card text-center">
+        <div class="card-header">
+
+            <ul class="nav nav-pills card-header-pills">
+                <h5>Vaga Nº 36</h5>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="text-left">
+                <h5 class="card-title text-center">Área: T.I</h5>
+                <p class="card-text text-left">Status da vaga: Aguardando confirmação</br>
+                    <p class="card-text text-left">Descrição da vaga:</br>
+                        </br>
+                        Suporte ao sistema operacional e microinformática; Suporte de aplicativos e software;
+                        Gerenciamento de arquivos; Medidas de segurança; Suporte à impressão; Suporte e
+                        infraestrutura
+                        de redes e cabeamento; Monitoramento e suporte geral ao usuário e aceso remoto. Requisitos:
+                        Cursando superior a partir do 2º semestre.
+
+                    </p>
+                    </br>
+                    <p class="card-text text-left">Empresa: Company Name Here</p>
+                    <p class="card-text text-left">Representante da empresa: Thiago Potter </p>
+                    </br>
+                    <p class="card-text text-left">Estagiário/Empregado: Júlio Rodrigues de Sousa Filho</p>
+                    <p class="card-text text-left">Matrícula: 2015105210430138</p>
+                    <p class="card-text text-left">Curso: Tecnologia em análise e desenvolvimento de sistemas</p>
+                    <p class="card-text text-left">Período: Egresso</p>
+                    <p class="card-text text-left">Sexo: Masculino</p>
+                    <p class="card-text text-left">Cidade de residencia: Iporá</p>
+                    </br>
+                    <p class="card-text text-left">Professor Orientador: Eliana Tiba</p>
+                    <p class="card-text text-left">Matrícula / SIAPE: 2015105210430138</p>
+                    </br>
+
+                    <p class="card-text text-left">Habilidades:</br>
+                        Gerênciar equipe;</br>
+                        Desenvolvimento desktop e web;</br>
+                        Conhecimento em POO; </br>
+                        Desenvolvedor Java;</br>
+                        Facilidade em falar com pessoas;</br>
+                        Aprender rápido;</br>
+                    </p>
+                    </br>
+                    <p class="card-text text-left">Período do estágio: 01/03/2019 a 25/06/2019</p>
+                    <p class="card-text text-left">Total de horas do estágio: 200 Hrs</p>
+                    <p class="card-text text-left">Carga horária diária: 8 Hrs/dia</p>
+            </div>
+            </br>
+            <div align="center" class="card-body">
+
+                <button id="${doc.id}" href="#" type="button" class="btn btn-success" onclick="Aprovar(id)"
+                    data-toggle="modal" data-target="#ModalAprovado">Cofirmar</button>
+                <button id="${doc.id}" href="#" type="button" class="btn btn-danger" onclick="Recusar(id)"
+                    data-toggle="modal" data-target="#ModalRecusado">Negar</button>
+               
+            </div>
+
+        </div>
+    </div>
+
+    </br> </br>
+
+
+
+</div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

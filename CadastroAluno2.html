@@ -1,0 +1,127 @@
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+    <script src="./js/CadastroAluno.js"></script>
+
+    <title>Banco virtual de talentos</title>
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- firebase-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+
+    <!-- aaaaaaaaaaaaaaaaaaaa -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <h5 class="ml-2 text-black h5"> Banco Virtual de Talentos </h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  mr-auto">
+
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="CadastraEmpresa.html">Cadastro de Empresa<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="ml-2 nav-link" href="CadastroAluno.html">Cadastro de Aluno<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./Login.html">Menu</a>
+            </li>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundo-main.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    <div class="container" >
+        </br>
+    </br>
+</br></br>
+</br></br>
+</br>
+     
+              
+                <div class="text-center">
+                    <H3>Informe os dados para login </H3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Email" style="background-color: white">Email</label>
+                        <input type="text" class="form-control" id="Email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="Senha" style="background-color: white">Senha</label>
+                        <input type="password" class="form-control" id="Senha" placeholder="Senha">
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-success btn-lg btn-block" onclick="set2()">Solicitar
+                    Cadastro</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDdshKPmkJgB2rnrlXE5ryEEB-VvG2F5_8",
+            authDomain: "banco-virtual-de-talentos.firebaseapp.com",
+            databaseURL: "https://banco-virtual-de-talentos.firebaseio.com",
+            projectId: "banco-virtual-de-talentos",
+            storageBucket: "banco-virtual-de-talentos.appspot.com",
+            messagingSenderId: "463860022406"
+        };
+        firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>

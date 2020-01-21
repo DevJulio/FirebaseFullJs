@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://getbootstrap.com/docs/4.1/examples/sign-in/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+
+    <title>Banco virtual de talentos</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Signin Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Signin Template for Bootstrap_files/signin.css" rel="stylesheet">
+
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <!--   class="ml-3" DETERMINA O ESPAÇAMENTO À ESQUERDA         -->
+        <h5 class="ml-2 text-black h5"> Banco Virtual de Talentos </h5>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+</head>
+<style>
+    body {
+        background: url("img/fundo-main.png") no-repeat right center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+
+
+<div class="container">
+
+    <div class="d-flex justify-content-center">
+        <img class="mb-4" src="./img/icons8-company-96 (1).png" alt="" width="125" height="125">
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-lg active" onclick="Empresa()">Sou Empresa</button>
+    </div>
+    </br>
+    <div class="d-flex justify-content-center">
+        <img class="mb-4" src="./img/icons8-user-96.png" alt="" width="125" height="125">
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-lg active" onclick="Aluno()">Sou Aluno</button>
+
+    </div>
+    </br>
+    <div class="d-flex justify-content-center">
+        <img class="mb-4" src="./img/icons8-student-male-96.png" alt="" width="125" height="125">
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-lg active" onclick="Egresso()">Sou Egresso</button>
+
+    </div>
+</div>
+<script>
+    function Aluno() {
+        window.location.href = "./CadastroAluno.html"
+    }
+    function Empresa() {
+        window.location.href = "./CadastraEmpresa.html"
+    }
+    function Egresso() {
+        window.location.href = "./CadastroEgresso.html"
+    }
+</script>
+</body>
+
+</html>

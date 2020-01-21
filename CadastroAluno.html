@@ -1,0 +1,370 @@
+<html>
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+    <!-- aaaaaaaaaaaaaaaaaaaa -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+
+
+    <title>Banco virtual de talentos</title>
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+
+
+    <!-- firebase-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <h5 class="ml-2 text-black h5"> Banco Virtual de Talentos </h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  mr-auto">
+
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="CadastraEmpresa.html">Cadastro de Empresa<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="ml-2 nav-link" href="CadastroAluno.html">Cadastro de Aluno<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./Login.html">Menu</a>
+            </li>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundo-main.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    <div class="container" style="background-color: white">
+        </br>
+        </br>
+        </br>
+        <div class="text-center">
+            <H3>Informe os dados do aluno </H3>
+        </div>
+        </br>
+        <div>
+            <form class="form-signin">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="inputState" style="background-color: white">Nome: </label>
+                        <input type="text" class="form-control" id="nomeComleto" placeholder="Nome Completo">
+                    </div>
+                    <div class="col">
+                        <label for="inputState" style="background-color: white">Matrícula: </label>
+                        <input type="text" class="form-control" id="Matricula" placeholder="Matrícula">
+                    </div>
+                    <div class="form-group  col-sm-6 ">
+                        <label for="idioma1" style="background-color: white">Idioma 1: </label>
+                        <select id="idioma1" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option>Inglês</option>
+                            <option>Francês</option>
+                            <option>Espanhol</option>
+                            <option>Libras</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="idioma2" style="background-color: white">Idioma 2: </label>
+                        <select id="idioma2" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option>Não possuo</option>
+                            <option>Espanhol</option>
+                            <option>Libras</option>
+                            <option>Inglês</option>
+                            <option>Francês</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputState" style="background-color: white">Curso: </label>
+                        <select id="Curso" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option>Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+                            <option>Agronegócio</option>
+                            <option>Licenciatura em Química</option>
+                            <option>Agronomia</option>
+                            <option>Secretariado</option>
+                            <option>Administração</option>
+                            <option>Ensino Médio: TEDS</option>
+                            <option>Ensino Médio: Química</option>
+                            <option>Ensino Médio: Agropecuária</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState" style="background-color: white">Período: </label>
+                        <select id="Periodo" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option>1º Ano Ensino Médio</option>
+                            <option>2º Ano Ensino Médio</option>
+                            <option>3º Ano Ensino Médio</option>
+                            <option>1º</option>
+                            <option>2º</option>
+                            <option>3º</option>
+                            <option>4º</option>
+                            <option>5º</option>
+                            <option>6º</option>
+                            <option>7º</option>
+                            <option>8º</option>
+                            <option>9º</option>
+                            <option>10º</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="form-group col-md-6">
+                        <label for="Endereco" style="background-color: white">Endereço</label>
+                        <input type="text" class="form-control" id="Endereco" placeholder="Endereço">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="Bairro" style="background-color: white">Bairro</label>
+                        <input type="text" class="form-control" id="Bairro" placeholder="Bairro">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="Cidade">Cidade de residencia: </label>
+                        <select id="Cidade" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option>Iporá</option>
+                            <option>Caiapônia</option>
+                            <option>Amorinópolis</option>
+                            <option>Israelândia</option>
+                            <option>Fazenda nova</option>
+                            <option>Bacilância</option>
+                            <option>São luis de montes Belos</option>
+                            <option>Goiâna</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="Estado" style="background-color: white">Estado</label>
+                        <input type="text" class="form-control" id="Estado" placeholder="Estado">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="CEP" style="background-color: white">CEP</label>
+                        <input type="text" class="form-control " onkeypress="$(this).mask('00.000-000')" id="CEP"
+                            placeholder="CEP">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="Bairro" style="background-color: white">Número</label>
+                        <input type="text" class="form-control" id="Numero" placeholder="Número">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState" style="background-color: white">Gênero: </label>
+                        <select id="Sexo" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <H3>Informe os dados a seguir:</H3>
+                </div>
+                <div class="form-row">
+
+
+                    <div class="form-group col-md-4">
+                        <label for="CPF" style="background-color: white">CPF</label>
+                        <input type="text" class="form-control" minlength="14" maxlength="14"
+                            onkeypress="$(this).mask('000.000.000-00');" id="CPF" placeholder="CPF">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="RG" style="background-color: white">RG</label>
+                        <input type="text" class="form-control" onkeypress="$(this).mask('00.000.000-00')" id="RG"
+                            placeholder="RG">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="Orgão Expedidor" style="background-color: white">Orgão Expedidor</label>
+                        <input type="text" class="form-control" id="OE" placeholder="Orgão Expedidor">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="Celular" style="background-color: white">Celular</label>
+                        <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')"
+                            id="Telefone1" placeholder="Celular">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="Celular 2" style="background-color: white">Celular 2</label>
+                        <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')"
+                            id="Telefone2" placeholder="Celular 2">
+                    </div>
+
+
+
+                    <div class="form-group col-md-4">
+                        <label for="Celular 2" style="background-color: white">Foto</label>
+                        </br>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="Foto">
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState" style="background-color: white">Você participou de algum projeto
+                            institucional? </label>
+                        <select id="Projeto" class="form-control">
+                            <option>Ensino</option>
+                            <option>Pesquisa</option>
+                            <option>Extensão</option>
+                            <option>Pesquisa e Extensão</option>
+                            <option>Ensino e Extensão</option>
+                            <option>Pesquisa e Ensino</option>
+                            <option>Extensão, Pesquisa e Ensino</option>
+                            <option selected>Não participei</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState" style="background-color: white">Você está trabalhado? </label>
+                        <select id="Trabalhando" class="form-control">
+                            <option selected>Informe...</option>
+                            <option>Sim</option>
+                            <option>Não</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState" style="background-color: white">Você está trabalhando na sua área de
+                            formação? </label>
+                        <select id="TrabalhandoArea" class="form-control">
+                            <option selected>Informe...</option>
+                            <option>Sim</option>
+                            <option>Não</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState" style="background-color: white">Você está fazendo ou fez alguma
+                            pós-graduação</label>
+                        <select id="PosGraduacao" class="form-control">
+                            <option selected>Informe...</option>
+                            <option>Não.</option>
+                            <option>Não, mas pretendo</option>
+                            <option>Sim, Estou fazendo</option>
+                            <option>Sim, já terminei</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="inputState" style="background-color: white">Se você estiver trabalhando, começou a
+                            trabalhar durante ou depois da graduação?</label>
+                        <select id="TrabalhandoGraduacao" class="form-control">
+                            <option selected>Informe...</option>
+                            <option>Não estou trabalhando.</option>
+                            <option>Durante a graduação</option>
+                            <option>Depois da graduação</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+        </div>
+
+
+
+        <button type="button" class="btn btn-success btn-lg btn-block" onclick="setAluno()">Solicitar cadastro</button>
+        </br>
+        </br>
+        </br> </br>
+
+        </form>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/CadastroAluno.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDdshKPmkJgB2rnrlXE5ryEEB-VvG2F5_8",
+            authDomain: "banco-virtual-de-talentos.firebaseapp.com",
+            databaseURL: "https://banco-virtual-de-talentos.firebaseio.com",
+            projectId: "banco-virtual-de-talentos",
+            storageBucket: "banco-virtual-de-talentos.appspot.com",
+            messagingSenderId: "463860022406"
+        };
+        firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>

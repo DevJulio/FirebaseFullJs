@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+
+    <title>Banco virtual de talentos</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+    <!-- aaaaaaaaaaaaaaaaaaaa -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <!--   class="ml-3" DETERMINA O ESPAÇAMENTO À ESQUERDA         -->
+        <h5 class="ml-2 text-black h5"> Banco virtual de talentos </h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  mr-auto">
+
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./EmpresaIndex.html">Menu<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./EmpresaPerfil.html">Perfil<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="ml-2 nav-link" href="EmpresaCadastraVagas.html">Requisição de pessoal<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="ml-2 nav-link" href="./EmpresaTodasAsVagas.html">Todas as vagas <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="ml-2 nav-link" href="CadastroAluno.html">Relatórios<span
+                            class="sr-only">(current)</span></a>
+                </li>
+
+
+            </ul>
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./Login.html">Logout</a>
+            </li>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundo-main.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+
+    <div class="container" style="background-color: white">
+        </br>
+        </br>
+        </br>
+        </br>
+
+        <h1>Cadastro de vagas</h1>
+        </br></br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descrição da vaga</label>
+            <textarea class="form-control" id="descricao" rows="5"></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Endereco" style="background-color: white">Período do estágio, de:</label>
+                <input type="text" class="form-control" id="Comeco" placeholder="Começo">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Endereco" style="background-color: white">Período do estágio, até</label>
+                <input type="text" class="form-control" id="Final" placeholder="Final">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Endereco" style="background-color: white">Total de horas:</label>
+                <input type="text" class="form-control" id="Horas" placeholder="horas">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Endereco" style="background-color: white">Carga horária diária:</label>
+                <input type="text" class="form-control" id="CargaHoraria" placeholder="Carga horária">
+            </div>
+        </div>
+        </br>
+        <h3 class="text-center">Características do candidato</h3>
+        </br>
+        <div class="form-row">
+
+            <div class="form-group col-md-3">
+                <label for="inputState" style="background-color: white">Área do candidato: </label>
+                <select id="Curso" class="form-control">
+                    <option selected>Escolha...</option>
+                    <option selected>T.I</option>
+                    <option selected>Agronegócio</option>
+                    <option selected>Licenciatura em Química</option>
+                    <option selected>Agronomia</option>
+                    <option selected>Secretariado</option>
+                    <option selected>Administração</option>
+                    <option selected>Ensino Médio: TEDS</option>
+                    <option selected>Ensino Médio: Qúmica</option>
+                    <option selected>Ensino Médio: Agropecuária</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2 ">
+                <label for="inputState">Período: </label>
+                <select id="Periodo" class="form-control">
+                    <option selected>Escolha...</option>
+                    <option selected>Egresso</option>
+                    <option selected>1º</option>
+                    <option selected>2º</option>
+                    <option selected>3º</option>
+                    <option selected>4º</option>
+                    <option selected>5º</option>
+                    <option selected>6º</option>
+                    <option selected>7º</option>
+                    <option selected>8º</option>
+                    <option selected>9º</option>
+                    <option selected>10º</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-2 ">
+                <label for="Sexo">Sexo: </label>
+                <select id="Sexo" class="form-control">
+                    <option selected>Escolha...</option>
+                    <option selected>Não há preferência</option>
+                    <option selected>Masculino</option>
+                    <option selected>Feminino</option>
+
+                </select>
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="Cidade">Cidade de residencia: </label>
+                <select id="Cidade" class="form-control">
+                    <option selected>Escolha...</option>
+                    <option selected>Iporá</option>
+                    <option selected>Caiapônia</option>
+                    <option selected>Amorinópolis</option>
+                    <option selected>Israelândia</option>
+                    <option selected>Fazenda nova</option>
+                    <option selected>Baciância</option>
+                    <option selected>São luis de montes Belos</option>
+                    <option selected>Goiâna</option>
+                </select>
+            </div>
+
+
+
+
+        </div>
+        <div class="form-row">
+            <div class="form-group  col-sm-6 ">
+                <label for="Idioma1">Idioma 1: </label>
+                <select id="Idioma1" class="form-control">
+                    <option selected>Escolha...</option>
+                    <option selected>Não é necessário</option>
+                    <option selected>Inglês</option>
+                    <option selected>Francês</option>
+                    <option selected>Espanhol</option>
+                    <option selected>Libras</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="Idioma2">Idioma 2: </label>
+                <select id="Idioma2" class="form-control">
+                    <option selected>Escolha...</option>
+                    <option selected>Não é necessário</option>
+                    <option selected>Espanhol</option>
+                    <option selected>Libras</option>
+                    <option selected>Inglês</option>
+                    <option selected>Francês</option>
+                </select>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <h3 class="text-center">Informe as Habilidades desejadas</h3>
+
+
+        <div class="table-responsive">
+            <table class="table table-borderless " id="dynamic_field">
+                <tr>
+                    <td><input type="text" name="HabilidadesVetor[]" placeholder="Habilidade: "
+                            class="form-control name_list" /></td>
+                    <td><button type="button" name="add" id="add" class="btn btn-success">Adicionar Mais</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var i = 1;
+                $('#add').click(function () {
+                    i++;
+                    $('#dynamic_field').append('<tr id="row' + i + '"><td><input type="text" name="HabilidadesVetor[]" placeholder="Adicionar mais" class="form-control name_list" /></td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">Remover habilidade</button></td></tr>');
+                });
+
+                $(document).on('click', '.btn_remove', function () {
+                    var button_id = $(this).attr("id");
+                    $('#row' + button_id + '').remove();
+                });
+
+
+            });
+        </script>
+        </br>
+
+        
+        <div class="table-responsive col-md-10">
+            <h3 style="background-color: white">Palavras Chave:</h3>
+            <p style="background-color: white">Informe palvras chave para que você encontre os melhores candidatos para a vaga</p>
+            <table class="table table-borderless " id="dynamic_fielddd">
+                <tr>
+                    <td><input type="text" name="PalavrasChaveVetor[]" placeholder="Palavras Chave: "
+                            class="form-control name_list" /></td>
+                    <td><button type="button" name="add" id="adddd" class="btn btn-success">Adicionar
+                            Mais</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var k = 300;
+                $('#adddd').click(function () {
+                    k++;
+                    $('#dynamic_fielddd').append('<tr id="row' + k + '"><td><input type="text" name="PalavrasChaveVetor[]" placeholder="Adicionar mais" class="form-control name_list" /></td><td><button type="button" name="remove" id="' + k + '" class="btn btn-danger btn_remove">Remover Palavra Chave</button></td></tr>');
+                });
+
+                $(document).on('click', '.btn_remove', function () {
+                    var button_id = $(this).attr("id");
+                    $('#row' + button_id + '').remove();
+                });
+
+
+            });
+
+        </script>
+        </br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <button type="button" class="btn btn-success btn-lg btn-block" onclick="setVaga()">Cadastrar vaga</button>
+
+
+
+
+
+        </br>
+        
+        </br>
+
+
+
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+    <script src="js/CadastraVaga.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

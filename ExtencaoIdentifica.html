@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js/CadastraVaga.js" type="text/javascript" charset="utf-8"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+
+    <title>Banco virtual de talentos</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+    <!-- aaaaaaaaaaaaaaaaaaaa -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <!--   class="ml-3" DETERMINA O ESPAÇAMENTO À ESQUERDA         -->
+        <h5 class="ml-2 text-black h5"> Banco virtual de talentos </h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="ml-2 nav-item active d-flex justify-content-xl-end">
+                    <a class="nav-link " href="./ExtencaoIndexNovo.html">Menu</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./AprovaAlunosExtencao.html">Aprovar cadastros<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./ExtensaoEstatisticas.html">Estatísticas<span
+                            class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./loginExtensao.html">Logout</a>
+            </li>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Nome da empresa" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+
+
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundo-main.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+    </br></br></br>
+    <div class="container">
+
+
+        <img class="d-block mx-auto mb-4" src="./img/icons8-user-96.png" alt="125" width="" height="125">
+        <h2 class="py-0 text-center">Alunos compativeís com a vaga:</h2>
+
+        </br></br>
+
+
+
+
+
+        <div class="card text-center" id="info">
+            <div class="card-header">
+
+                <ul class="nav nav-pills card-header-pills">
+                    <h5>Alunos</h5>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-center">Principal Candidato(s): </h5>
+                </br>
+                <div class="text-left" id="CardPrincipal">
+
+
+
+
+                </div>
+            </br></br>
+                <div class="text-left" id="CardPrincipalB">
+
+
+
+
+                </div>
+
+           
+
+            </div>
+        </div>
+
+        </br>
+        </br>
+
+        <div class="card text-center" id="info">
+            <div class="card-header">
+
+                <ul class="nav nav-pills card-header-pills">
+                    <h5>Alunos</h5>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-center">Demais Candidatos compativeís: </h5>
+                </br>
+                <div class="text-left" id="CardSecundario">
+
+                </div>
+
+                </br></br>
+            </div>
+        </div>
+
+    </br></br>
+
+        <div id="ModalEmail" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Escreva seu email para o candidato!</h5>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h7>Informe o candidato</h7>
+                        <label for="message-text" class="col-form-label"></label>
+                        </br> </br>
+                        <textarea class="form-control" id="textoEmail"></textarea>
+                        </br>
+                        <button type="button" class="btn btn-primary" onclick="EnviaEmail()"
+                            data-dismiss="modal">Enviar</button>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+    <script src="js/IdentificaAlunos2.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

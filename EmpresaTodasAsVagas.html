@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-innovation-96.png">
+
+    <title>Banco virtual de talentos</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+
+    <!-- aaaaaaaaaaaaaaaaaaaa -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/icons8-innovation-96.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <!--   class="ml-3" DETERMINA O ESPAÇAMENTO À ESQUERDA         -->
+        <h5 class="ml-2 text-black h5"> Banco virtual de talentos </h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  mr-auto">
+
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./EmpresaIndex.html">Menu<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./EmpresaPerfil.html">Perfil<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="ml-2 nav-link" href="./EmpresaCadastraVagas.html">Requisição de pessoal<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="ml-2 nav-link" href="./EmpresaTodasAsVagas.html">Todas as vagas <span
+                            class="sr-only">(current)</span></a>
+                </li>
+           
+
+
+            </ul>
+            <li class="ml-2 nav-item d-flex justify-content-xl-end">
+                <a class="nav-link " href="./loginEmpresa.html">Logout</a>
+            </li>
+          
+        </div>
+    </nav>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/fundo-main.png") no-repeat right center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+    </br>
+    </br>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+                <h5 class="text-dark h4">Filtros</h5>
+                <span class="text-muted">Informe os filtros para refinar sua pesquisa.</span>
+                </br></br>
+                <ul class="nav nav-tabs">
+
+                    <div class="form-group col-md-3-sm-4 ml-1">
+                        <label for="inputState">Área: </label>
+                        <select id="Curso" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option selected>Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+                            <option selected>Agronegócio</option>
+                            <option selected>Licenciatura em Química</option>
+                            <option selected>Agronomia</option>
+                            <option selected>Secretariado</option>
+                            <option selected>Administração</option>
+                            <option selected>Ensino Médio: TEDS</option>
+                            <option selected>Ensino Médio: Qúmica</option>
+                            <option selected>Ensino Médio: Agropecuária</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3-sm-4 ml-1">
+                        <label for="inputState">Tipo da vaga: </label>
+                        <select id="Vaga" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option selected>Preenchida</option>
+                            <option selected>Aberta</option>
+                            <option selected>Finalizadas</option>
+                            <option selected>Aguardando confirmação</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3-sm-4 ml-1">
+                        <label for="inputState">Pesquisar: </label>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="fon()">Pesquisar</a>
+
+                        </li>
+
+                        </select>
+                    </div>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <nav class="navbar navbar-light bg-white">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span>Filtrar pesquisa</span>
+                </button>
+
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="container" id="menor">
+
+        <img class="d-block mx-auto mb-4" src="./img/icons8-company-96 (1).png" alt="125" width="" height="125">
+        <h4 class="py-0 text-center">Selecione um filtro ou clique no botão a baixo para vizualizar todas as vagas:
+            </h3>
+            </br></br>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-lg btn-outline-success" type="submit" onclick="mostraDiv()">Acessar</button>
+            </div>
+    </div>
+
+    <div class="container" id="maior" style="display: none;">
+
+
+
+        <div class="card text-center">
+            <div class="card-header">
+
+                <ul class="nav nav-pills card-header-pills">
+                    <h5>Carregando...</h5>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="text-left">
+                    <h5 class="card-title text-center">Carregando...</h5>
+
+
+                </div>
+            </div>
+            <div id="ModalEmail" class="modal fade" tabindex="-1" role="dialog">
+              
+            </div>
+            </br> </br>
+
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+    <script src="js/EmpesaTodasAsVagas.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/IdentificaAlunos2.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
